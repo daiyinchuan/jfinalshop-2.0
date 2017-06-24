@@ -126,7 +126,7 @@ public class SystemConfigController extends Controller {
 		//横幅广告
 		bannerImages = getFiles("bannerImageFile");
 		
-		systemConfig = getModel(SystemConfig.class);
+		systemConfig = getBean(SystemConfig.class);
 		
 		if (systemConfig.getPointType() == PointType.orderAmount) {
 			if (systemConfig.getPointScale() < 0) {

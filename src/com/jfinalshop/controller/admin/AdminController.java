@@ -77,7 +77,7 @@ public class AdminController extends BaseAdminController<Admin>{
 			return;
 		}
 		
-		Admin admin = Admin.dao.getAdminByUsername(username);			
+		Admin admin = Admin.dao.getAdminByUsername(username);
 		// 开始验证
 		Subject subject = SecurityUtils.getSubject();
 		UsernamePasswordToken token = new UsernamePasswordToken(username, DigestUtils.md5Hex(password));

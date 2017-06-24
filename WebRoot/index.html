@@ -7,7 +7,7 @@
   <meta name="description" content="JFinalShop是使用JFinal、AmazeUI等开发的开源网店系统。" />
   <!-- minimum-scale=1.0, maximum-scale=1.0 不加这两个在iPhone浏览器下点击缩小了的输入框会使整个页面变大 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-  <title>JFinalShop商城</title>
+  <title>他的商城</title>
 
   <!-- Set render engine for 360 browser -->
   <meta name="renderer" content="webkit">
@@ -190,88 +190,49 @@ $(function() {
  
 });
 </script>
-
 <!-- 会员登录 start -->
-
 <div class="am-modal am-modal-no-btn" tabindex="-1" id="member-login-modal">
-
   <div class="am-modal-dialog am-panel am-panel-default">
-
     <div class="am-modal-hd am-panel-hd">
-
       会员登录<a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
-
     </div>
-
     <div class="am-modal-bd am-panel-bd am-padding-0">
-
       <form id="loginWindowForm" class="am-form am-form-horizontal am-margin-top" action="/shop/member/ajaxLogin" method="post">
-
       <div class="am-form-group">
-
         <div class="am-u-sm-12 am-input-group am-input-group-sm">
-
           <span class="am-input-group-label"><i class="am-icon-user am-icon-fw"></i></span>
-
           <input type="text" class="am-form-field" id="loginUsername" name="member.username" placeholder="用户名" required>
-
         </div>
-
       </div>
-
       <div class="am-form-group am-form-group-sm">
-
         <div class="am-u-sm-12 am-input-group am-input-group-sm">
-
           <span class="am-input-group-label"><i class="am-icon-lock am-icon-fw"></i></span>
-
           <input type="password" class="am-form-field" id="loginPassword" name="member.password" placeholder="密码" required>
-
         </div>
-
       </div>
-
       <div class="am-form-group am-margin-bottom-xs">
-
         <div class="am-u-sm-7 am-input-group am-input-group-sm">
-
           <span class="am-input-group-label"><i class="am-icon-barcode am-icon-fw"></i></span>
-
           <input type="text" class="am-form-field" id="loginCaptcha" name="captchaToken" placeholder="验证码" required>
-
         </div>
-
         <div class="am-u-sm-5 am-padding-left-0">
-
           <img id="loginWindowCaptchaImage" class="am-fl" src="/captcha?width=85&height=33&fontsize=27" alt="换一张" />
-
         </div>
-
       </div>
-
       <div class="am-form-group am-margin-bottom-xs">
-
         <div class="am-u-sm-12 am-u-md-12 am-text-right">
-
           <a class="am-badge am-badge-warning" href="/shop/member/passwordRecover">忘记密码 ^_^? </a>
-
         </div>
-
       </div>
       <div class="am-form-group am-form-group-sm">
         <div class="am-u-sm-12 am-input-group am-input-group-sm">
           <button id="loginWindowFormBtn" type="submit" class="am-btn am-btn-primary am-btn-block" data-am-loading="{loadingText: '努力登录中...'}">登录</button>
         </div>
       </div>
-
       </form>
-
     </div>
-
   </div>
-
 </div>
-
 <!-- 会员登录 end -->
 <!-- 会员注册 start -->
 <div class="am-modal am-modal-no-btn" tabindex="-1" id="member-register-modal">
@@ -344,177 +305,86 @@ $(function() {
 <!-- 注册协议 end -->
 <!-- 顶部操作栏和logo、搜索 start -->
 <div class="shop-header">
-
 <div class="am-panel am-panel-default am-margin-bottom-0">
-
   <div class="am-panel-hd am-kai am-text-xs am-padding-vertical-0 am-padding-horizontal-xl am-cf">
-
     <div class="am-fl">
-
-      <span class="am-fl">您好&nbsp;</span><span id="headerLoginMemberUsername" class="am-text-warning am-fl"></span><span class="am-hide-sm-only am-fl">,欢迎来到JFinalShop商城!</span>
-
+      <span class="am-fl">您好&nbsp;</span><span id="headerLoginMemberUsername" class="am-text-warning am-fl"></span><span class="am-hide-sm-only am-fl">,欢迎来到他的商城!</span>
   	<a href="javascript:void(0);" id="headerShowLoginWindow">[登  录]</a>
-
   	<a href="/memberCenter" id="headerMemberCenter">[会员中心]</a>
-
   	<a href="javascript:void(0);" id="headerShowRegisterWindow">[注  册]</a>
-
   	<a href="/memberCenter/logout" id="headerLogout">[退  出]</a>
-
     </div>
-
     <div class="am-fr am-hide-sm-only">
-
-
       <a href="/html/article_content/201010/5010509a555548939840a3103d3cea71.html"  target="_blank">关于我们</a>
-
-
-
     </div>   
-
   </div>
-
   <div class="am-panel-bd am-padding-0">
-
     <div class="am-g">
-
       <div class="am-hide-sm-only am-u-md-4 am-u-lg-4 am-vertical-align" style="height:70px;">
-
-        <img class="am-vertical-align-middle" src="/statics/img/upload/logo.png" title="JFinalShop商城">
-
+        <img class="am-vertical-align-middle" src="/statics/img/upload/logo.png" title="他的商城">
       </div>
-
       <div class="am-u-sm-12 am-u-md-5 am-u-lg-4 shop-margin-vertical">
-
         <form id="productSearchForm" action="/shop/product/search" method="get" data-am-validator>
-
         <div class="am-g">
-
           <div class="am-u-sm-12 am-input-group am-input-group-sm am-input-group-primary">
-
             <input type="text" id="productSearchKeyword" name="keyword" class="am-form-field" placeholder="请输入关键词..." value="" required>
-
             <span class="am-input-group-btn">
-
               <button class="am-btn am-btn-primary" type="submit"><span class="am-icon-search"></span></button>
-
             </span>
-
           </div>
-
           <div class="am-u-sm-12 am-text-xs">
-
             热门关键词: 
-
-
             <a href="/shop/product/search?keyword=电子书">电子书 </a>
-
-
             <a href="/shop/product/search?keyword=生活电器">生活电器 </a>
-
-
             <a href="/shop/product/search?keyword=电脑配件">电脑配件 </a>
-
-
           </div>
-
         </div>
-
         </form>
-
       </div>
-
       <div class="am-show-lg-only am-u-lg-4 am-text-right am-vertical-align" style="height:64px;">
-
         <div class="am-text-sm am-vertical-align-middle">
-
           7×24小时服务热线：<strong>400-8888888</strong>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </div>
 <!-- 顶部操作栏和logo、搜索 end -->
 <!-- 导航 start -->
-
 <header class="am-topbar am-margin-bottom-0">
-
-
   <div class="am-topbar-brand am-dropdown" data-am-dropdown>
-
     <button class="am-btn am-btn-default am-btn-sm am-dropdown-toggle" data-am-dropdown-toggle>全部商品分类 <span class="am-icon-caret-down"></span></button>
-
     <ul class="am-dropdown-content am-text-sm">
-
-
-      <li><a href="/shop/product/list?id=80d1613023804a15b7bb504723d913a8"><span class="am-icon-list am-margin-right-xs"> </span>分类1</a></li>
-
-
-
-
-
+      <li><a href="/shop/product/list?id=4ea4ea9428cf48e989f8dbf28faf407b"><span class="am-icon-list am-margin-right-xs"> </span>水果</a></li>
+      <li class="am-divider"></li>
+      <li><a href="/shop/product/list?id=9254ce55e2c54f529c4310e15ac8db22"><span class="am-icon-list am-margin-right-xs"> </span>蔬菜</a></li>
     </ul>
-
   </div>
-
-
-
 
   <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
 
-
-
   <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
-
     <ul class="am-nav am-nav-pills am-topbar-nav">
-
-
       <li>
-
          <a href="/">首页</a>
-
       </li>
-
-
     </ul>
-
     <!-- 
-
     <div class="am-topbar-right">
-
       <div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">
-
         <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle" data-am-dropdown-toggle>其他 <span class="am-icon-caret-down"></span></button>
-
         <ul class="am-dropdown-content">
-
           <li><a href="#">注册</a></li>
-
           <li><a href="#">随便看看</a></li>
-
         </ul>
-
       </div>
-
     </div>
-
      -->
 
-
-
     <div class="am-topbar-right">
-
       <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="window.open('/shop/cartItem/list')"><span class="am-icon-shopping-cart am-margin-right-xs"></span>购物车</button>
-
     </div>
-
   </div>
-
 </header>
 </div>
 <!-- 导航 end -->
@@ -530,6 +400,7 @@ $(function() {
               <li><img src="/statics/img/banner2.png" /></li>
               <li><img src="/statics/img/banner3.png" /></li>
               <li><img src="/statics/img/banner4.png" /></li>
+              <li><img src="/upload/banner/f4e82f6f693b439ab98906183cb1c11c.jpeg" /></li>
             </ul>
           </div>
         </div>
@@ -538,7 +409,7 @@ $(function() {
             <li class="am-active"><span class="am-icon-cart-plus">新品上架</span></li>
           </ol>
           <ul class="am-avg-sm-3 am-avg-md-9 am-avg-lg-4 am-thumbnails">
-            <li><a href="/html/product_content/201706/a90676b2ec4c4fdb99be7bebd9258d39.html"><img class="am-thumbnail" src="/upload/image/201706/a066715b125e40aba6a796bc695ec430_thumbnail.jpg" alt="商品1" /></a></li>
+            <li><a href="/html/product_content/201706/fd741f8770404b84a5a67998b55de8bd.html"><img class="am-thumbnail" src="/upload/image/201706/de7b69589189409484b9253a183b4306_thumbnail.jpg" alt="喜头鱼" /></a></li>
           </ul>
         </div>
       </div>
@@ -551,6 +422,13 @@ $(function() {
         </div>
         <div class="am-panel-bd">
           <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-5 am-thumbnails">
+            <li>
+              <a href="/html/product_content/201706/fd741f8770404b84a5a67998b55de8bd.html">
+                <img class="am-thumbnail am-radius am-margin-bottom-0" src="/upload/image/201706/de7b69589189409484b9253a183b4306_small.jpg" />
+                <p class="am-kai am-text-sm am-text-center am-text-truncate am-margin-0">喜头鱼</p>
+                <p class="am-monospace am-text-danger am-text-center am-margin-0">￥8.00</p>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -564,10 +442,10 @@ $(function() {
         <div class="am-panel-bd">
           <ul class="am-avg-sm-2 am-avg-md-3 am-avg-lg-5 am-thumbnails">
             <li>
-              <a href="/html/product_content/201706/a90676b2ec4c4fdb99be7bebd9258d39.html">
-                <img class="am-thumbnail am-margin-bottom-0" src="/upload/image/201706/a066715b125e40aba6a796bc695ec430_small.jpg" />
-                <p class="am-kai am-text-sm am-text-center am-text-truncate am-margin-0">商品1</p>
-                <p class="am-monospace am-text-danger am-text-center am-margin-0">￥22.00</p>
+              <a href="/html/product_content/201706/fd741f8770404b84a5a67998b55de8bd.html">
+                <img class="am-thumbnail am-margin-bottom-0" src="/upload/image/201706/de7b69589189409484b9253a183b4306_small.jpg" />
+                <p class="am-kai am-text-sm am-text-center am-text-truncate am-margin-0">喜头鱼</p>
+                <p class="am-monospace am-text-danger am-text-center am-margin-0">￥8.00</p>
               </a>
             </li>
           </ul>
